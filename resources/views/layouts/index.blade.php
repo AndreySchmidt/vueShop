@@ -71,7 +71,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="pages/kanban.html" class="nav-link">
+            <a href="{{ route('category.index') }}" class="nav-link">
               <i class="nav-icon far fa-list-alt"></i>
               <p>Категории</p>
             </a>
