@@ -32,7 +32,27 @@
               @csrf
               @method('patch')
               <div class="form-group">
-                <input type="text" name="name" value="{{ $user->name }}" class="form-control" />
+                <input type="text" name="name" value="{{ $user->name ?? old('name') }}" placeholder="Имя" class="form-control" />
+              </div>
+              <div class="form-group">
+                <input type="text" name="surname" value="{{ $user->surname ?? old('surname') }}" placeholder="Фамилия" class="form-control" />
+              </div>
+              <div class="form-group">
+                <input type="text" name="patronymic" value="{{ $user->patronymic ?? old('patronymic') }}" placeholder="Отчество" class="form-control" />
+              </div>
+              <div class="form-group">
+                <input type="text" name="age" value="{{ $user->age ?? old('age') }}" placeholder="Возраст" class="form-control" />
+              </div>
+              <div class="form-group">
+                <input type="text" name="address" value="{{ $user->address ?? old('address') }}" placeholder="Адрес" class="form-control" />
+              </div>
+
+              <div class="form-group">
+              <select name="gender" class="custom-select form-control" >
+                <option disabled selected>Пол</option>
+                <option {{ ($user->gender == 1 || old('gender') == 1) ? ' selected' : '' }} value="1">Мужской</option>
+                <option {{ ($user->gender == 2 || old('gender') == 2) ? ' selected' : '' }} value="2">Женский</option>
+              </select>
               </div>
               <div class="form-group">
                 <input type="submit" class="btn btn-primary" value="Ok" />

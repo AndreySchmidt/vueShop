@@ -38,7 +38,13 @@
                       <thead>
                         <tr>
                           <th>ID</th>
-                          <th>Название</th>
+                          <th>Имя</th>
+                          <th>Фамилия</th>
+                          <th>Отчество</th>
+                          <th>Email</th>
+                          <th>Возраст</th>
+                          <th>Адрес</th>
+                          <th>Пол</th>
                         </tr>
                       </thead>
                       <tbody>
@@ -46,6 +52,12 @@
                         <tr>
                           <td>{{ $user->id }}</td>
                           <td><a href="{{ route('user.show', $user->id) }}">{{ $user->name }}</a></td>
+                          <td>{{ $user->surname }}</td>
+                          <td>{{ $user->patronymic }}</td>
+                          <td>{{ $user->email }}</td>
+                          <td>{{ $user->age }}</td>
+                          <td>{{ $user->address }}</td>
+                          <td>{{ $user->genderTitle }}</td>
                         </tr>
                         @endforeach
                       </tbody>

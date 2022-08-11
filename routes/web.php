@@ -39,7 +39,7 @@ Route::group(['prefix' => 'users'], function(){
     Route::get('/create', \App\Http\Controllers\User\CreateController::class)->name('user.create');
     Route::post('/', \App\Http\Controllers\User\StoreController::class)->name('user.store');
     Route::get('/{user}/edit', \App\Http\Controllers\User\EditController::class)->name('user.edit');
-    Route::get('/{users}', \App\Http\Controllers\User\ShowController::class)->name('user.show');
+    Route::get('/{user}', \App\Http\Controllers\User\ShowController::class)->name('user.show');
     Route::patch('/{user}', \App\Http\Controllers\User\UpdateController::class)->name('user.update');
     Route::delete('/{user}', \App\Http\Controllers\User\DeleteController::class)->name('user.delete');
 });
