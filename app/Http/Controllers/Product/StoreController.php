@@ -1,0 +1,20 @@
+<?php
+
+namespace App\Http\Controllers\Product;
+
+use App\Http\Controllers\Controller;
+use Illuminate\Http\Request;
+
+use App\Http\Requests\Product\StoreRequest;
+use App\Models\Product;
+
+class StoreController extends Controller
+{
+    public function __invoke(StoreRequest $request)
+    {
+        $data = $request->validated();
+        Product::firstOrCreate($data);
+
+        return redirect()->route('product.index');
+    }
+}
