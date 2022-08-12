@@ -30,14 +30,13 @@
 
             <form action = "{{ route('product.store') }}" method="POST">
               @csrf
-              <div class="form-group">
-                <input type="text" name="title" class="form-control" />
-              </div>
-              <div class="form-group">
-                <input type="submit" class="btn btn-primary" value="Добавить" />
-              </div>
+              <div class="form-group"><input type="text" name="title" placeholder="title" class="form-control" /></div>
+              <div class="form-group"><input type="text" name="description" placeholder="description" class="form-control" /></div>
+              <div class="form-group"><input type="text" name="content" placeholder="content" class="form-control" /></div>
+              <div class="form-group"><input type="text" name="price" placeholder="price" class="form-control" /></div>
+              <div class="form-group"><input type="text" name="count" placeholder="count" class="form-control" /></div>
+              <div class="form-group"><input type="submit" class="btn btn-primary" value="Добавить" /></div>
             </form>
-
             
           </div>
           <!-- /.col -->
