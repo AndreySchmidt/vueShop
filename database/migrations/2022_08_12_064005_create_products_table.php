@@ -16,11 +16,11 @@ return new class extends Migration
         Schema::create('products', function (Blueprint $table) {
             $table->id();
             $table->string('title');
-            $table->text('description');
-            $table->text('content');
-            $table->string('preview_image');
-            $table->integer('price');
-            $table->integer('count');
+            $table->text('description')->nullable();
+            $table->text('content')->nullable();
+            $table->string('preview_image')->nullable();
+            $table->integer('price')->nullable();
+            $table->integer('count')->nullable();
             $table->boolean('is_published')->default(true);
             $table->timestamps();
 
